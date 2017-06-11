@@ -1,4 +1,4 @@
-# sf-templator
+# SF Templator
 
 SF Templator offers you advance SparkFrame Theme design options like CMS, Forum, E-Shop design, Custom Page Template Design, etc.
 
