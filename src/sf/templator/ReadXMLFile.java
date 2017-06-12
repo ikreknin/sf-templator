@@ -20,7 +20,8 @@ public class ReadXMLFile {
             Document doc = dBuilder.parse(fXmlFile);
             doc.getDocumentElement().normalize();
 
-            System.out.println("Root element :" + doc.getDocumentElement().getNodeName());
+            Element root = doc.getDocumentElement();
+            System.out.println("Root element :" + root.getNodeName());
             NodeList nList = doc.getElementsByTagName("page");
             System.out.println("----------------------------");
 
@@ -29,14 +30,9 @@ public class ReadXMLFile {
                 System.out.println("Current Element :" + nNode.getNodeName());
                 if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                     Element eElement = (Element) nNode;
-                    System.out.println("Page name : "
-                            + eElement.getAttribute("url"));
-                    System.out.println("Index page : "
-                            + eElement.getElementsByTagName("name")
-                                    .item(0).getTextContent());
-                    System.out.println("Index page : "
-                            + eElement.getElementsByTagName("code")
-                                    .item(0).getTextContent());
+                    System.out.println("URL name : " + eElement.getAttribute("url"));
+                    System.out.println("Page name : " + eElement.getElementsByTagName("name").item(0).getTextContent());
+                    System.out.println("Code : " + eElement.getElementsByTagName("code").item(0).getTextContent());
                 }
             }
         } catch (Exception e) {
