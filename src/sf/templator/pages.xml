@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html>
+    <page url="index">
+        <name>Home</name>
+        <code>Index Page Code Here</code>
+    </page>
+    <page url="site">
+        <name>Site</name>
+        <code>Site Page Code Here</code>
+    </page>
+    <page url="about">
+        <name>About</name>
+        <code>About Page Code Here</code>
+    </page>
+</html>
