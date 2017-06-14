@@ -11,14 +11,16 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="BorderPane" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sf.templator.FXMLDocumentController">
+<AnchorPane id="BorderPane" prefHeight="1000.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sf.templator.FXMLDocumentController">
     <children>
             <Button fx:id="button" alignment="CENTER" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50" prefWidth="150" text="Start" textAlignment="CENTER" BorderPane.alignment="CENTER">
                 <font>
                     <Font size="18.0" />
                 </font>
             </Button>
-      <TreeView layoutX="14.0" layoutY="109.0" prefHeight="440.0" prefWidth="200.0" />
-      <HTMLEditor htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="325.0" layoutY="8.0" prefHeight="585.0" prefWidth="661.0" />
+      <TreeView fx:id="treeView" layoutX="14.0" layoutY="109.0" prefHeight="440.0" prefWidth="200.0" />
+      <HTMLEditor fx:id="htmlEditor" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="325.0" layoutY="8.0" prefHeight="316.0" prefWidth="661.0" />
+      <TextArea fx:id="textArea" layoutX="325.0" layoutY="335.0" prefHeight="256.0" prefWidth="661.0" />
+      <WebView fx:id="webView" layoutX="325.0" layoutY="602.0" prefHeight="391.0" prefWidth="661.0" />
     </children>   
 </AnchorPane>
