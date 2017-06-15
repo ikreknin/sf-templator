@@ -18,7 +18,7 @@
                     <Font size="18.0" />
                 </font>
             </Button>
-      <TreeView fx:id="treeView" layoutX="14.0" layoutY="109.0" prefHeight="440.0" prefWidth="200.0" />
+      <TreeView fx:id="treeView" layoutX="14.0" layoutY="109.0" onContextMenuRequested="#mouseClick" onMouseClicked="#mouseClick" prefHeight="440.0" prefWidth="200.0" />
       <HTMLEditor fx:id="htmlEditor" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="325.0" layoutY="8.0" prefHeight="316.0" prefWidth="661.0" />
       <TextArea fx:id="textArea" layoutX="325.0" layoutY="335.0" prefHeight="256.0" prefWidth="661.0" />
       <WebView fx:id="webView" layoutX="325.0" layoutY="602.0" prefHeight="391.0" prefWidth="661.0" />

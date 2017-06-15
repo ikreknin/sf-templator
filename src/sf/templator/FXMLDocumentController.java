@@ -11,6 +11,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.web.HTMLEditor;
 import javafx.scene.web.WebView;
 import javax.xml.parsers.DocumentBuilder;
@@ -48,6 +49,25 @@ public class FXMLDocumentController implements Initializable {
     private FXMLDocumentModel model = new FXMLDocumentModel();
 
     @FXML
+    public void mouseClick(MouseEvent mouseEvent) {
+        TreeItem item = (TreeItem) treeView.getSelectionModel().getSelectedItem();
+        System.out.println("Tree Clicked!");
+        if (mouseEvent.getClickCount() == 2) {
+            System.out.println("Twice !! " + item.getValue());
+            System.out.println("Code: " + item.getValue());
+//            int row = treeView.getRow(item);
+//            System.out.println("NEW !! " + row);
+//            int index = item.getParent().getChildren().indexOf(item);
+//            System.out.println("NEW !! " + index);
+
+            htmlEditor.setHtmlText("" + item.getValue());
+            textArea.setText(htmlEditor.getHtmlText());
+            webView.getEngine().loadContent(htmlEditor.getHtmlText());
+
+        }
+    }
+
+    @FXML
     private void handleButtonAction(ActionEvent event) {
         System.out.println("You clicked me!");
         button.setText("Clicked");
@@ -74,9 +94,8 @@ public class FXMLDocumentController implements Initializable {
             NodeList nList = doc.getElementsByTagName("page");
             System.out.println("----------------------------");
 
-            
-        TreeItem<String> rootXML = new TreeItem<String>(root.getNodeName());
-        rootXML.setExpanded(true);
+            TreeItem<String> rootXML = new TreeItem<String>(root.getNodeName());
+            rootXML.setExpanded(true);
 //        TreeItem<String> nodeItemA = new TreeItem<>("Item A");
 //        TreeItem<String> nodeItemB = new TreeItem<>("Item B");
 //        TreeItem<String> nodeItemC = new TreeItem<>("Item C");
@@ -85,7 +104,7 @@ public class FXMLDocumentController implements Initializable {
 //        TreeItem<String> nodeItemA2 = new TreeItem<>("Item A2");
 //        TreeItem<String> nodeItemA3 = new TreeItem<>("Item A3");
 //        nodeItemA.getChildren().addAll(nodeItemA1, nodeItemA2, nodeItemA3);
-            
+
             for (int temp = 0; temp < nList.getLength(); temp++) {
                 Node nNode = nList.item(temp);
 //                System.out.println("Current Element :" + nNode.getNodeName());
@@ -98,16 +117,18 @@ public class FXMLDocumentController implements Initializable {
                     System.out.println("Page name : " + eElement.getElementsByTagName("name").item(0).getTextContent());
                     System.out.println("Code : " + eElement.getElementsByTagName("code").item(0).getTextContent());
 
-rootXML.setExpanded(true);
-TreeItem<String> nodeItem = new TreeItem<>(nNode.getNodeName());
-TreeItem<String> nodeItemChild = new TreeItem<>(eElement.getElementsByTagName("name").item(0).getTextContent());
-TreeItem<String> found = new TreeItem<>(nNode.getNodeName());
-nodeItemChild.getChildren().add(found);
-nodeItem.getChildren().add(nodeItemChild);
-rootXML.getChildren().add(nodeItem);
+                    TreeItem<String> nodeItem = new TreeItem<>(nNode.getNodeName());
+                    TreeItem<String> nodeItemChild = new TreeItem<>(eElement.getElementsByTagName("name").item(0).getTextContent());
+
+                    TreeItem<String> found = new TreeItem<>(eElement.getElementsByTagName("code").item(0).getTextContent());
+                    nodeItemChild.getChildren().add(found);
+
+                    nodeItem.getChildren().add(nodeItemChild);
+                    rootXML.getChildren().add(nodeItem);
+                    nodeItem.setExpanded(true);
                 }
             }
-treeView.setRoot(rootXML);
+            treeView.setRoot(rootXML);
         } catch (Exception e) {
             e.printStackTrace();
         }
