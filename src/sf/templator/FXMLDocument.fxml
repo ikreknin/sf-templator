@@ -22,5 +22,7 @@
       <HTMLEditor fx:id="htmlEditor" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="325.0" layoutY="8.0" prefHeight="316.0" prefWidth="661.0" />
       <TextArea fx:id="textArea" layoutX="325.0" layoutY="335.0" prefHeight="256.0" prefWidth="661.0" />
       <WebView fx:id="webView" layoutX="325.0" layoutY="602.0" prefHeight="391.0" prefWidth="661.0" />
+      <Button onAction="#handleSaveButton" layoutX="188.0" layoutY="24.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="113.0" text="Save" />
+      <Button onAction="#handleViewButton" layoutX="188.0" layoutY="64.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="113.0" text="View" />
     </children>   
 </AnchorPane>

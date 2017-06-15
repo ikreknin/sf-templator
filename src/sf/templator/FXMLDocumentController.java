@@ -1,6 +1,12 @@
 package sf.templator;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -22,6 +28,8 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 public class FXMLDocumentController implements Initializable {
+
+    private String filename = "file_name";
 
     @FXML
     private Label label;
@@ -65,6 +73,33 @@ public class FXMLDocumentController implements Initializable {
             webView.getEngine().loadContent(htmlEditor.getHtmlText());
 
         }
+    }
+
+    @FXML
+    private void handleSaveButton(ActionEvent event) throws IOException {
+        System.out.println("___SAVE___");
+        BufferedWriter writer = null;
+        try {
+            writer = new BufferedWriter(new FileWriter(filename + ".html"));
+            writer.write(htmlEditor.getHtmlText());
+
+        } catch (IOException e) {
+        } finally {
+            try {
+                if (writer != null) {
+                    writer.close();
+                }
+            } catch (IOException e) {
+            }
+        }
+    }
+
+    @FXML
+    private void handleViewButton(ActionEvent event) throws URISyntaxException, IOException {
+        System.out.println("___VIEW___");
+        String url = filename + ".html";
+        URI u = new URI(url);
+        java.awt.Desktop.getDesktop().browse(u);
     }
 
     @FXML
