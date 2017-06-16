@@ -1,27 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <html>
-    <page url="index">
-        <name>Home</name>
-        <code>
-<![CDATA[
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Light, Basic Header</title><link rel="stylesheet" href="assets/demo.css"><link rel="stylesheet" href="assets/header-basic-light.css"><link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css"></head><body><header class="header-basic-light"><div class="header-limiter"><h1><a href="#">Company<span>logo</span></a></h1><nav><a href="#">Home</a> <a href="#" class="selected">Blog</a> <a href="#">Pricing</a> <a href="#">About</a> <a href="#">Faq</a> <a href="#">Contact</a></nav></div></header><div class="menu"><img src="assets/demo-arrow.png" alt="arrow" height="120"><h1>Freebie: 7 Responsive Header Templates</h1><h2><a href="http://tutorialzine.com/2015/02/freebie-7-responsive-header-templates/">Download</a></h2><ul><li><a href="index.html">Basic</a></li><li><a href="header-basic-light.html" class="active">Basic Light</a></li><li><a href="header-fixed.html">Fixed</a></li><li><a href="header-login-signup.html">Login/Sign up</a></li><li><a href="header-search.html">Search</a></li><li><a href="header-second-bar.html">Second Bar</a></li><li><a href="header-user-dropdown.html">User Dropdown</a></li></ul></div><script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script src="http://cdn.tutorialzine.com/misc/enhance/v3.js" async></script></body></html>
-]]>
-        </code>
+    <page section="header">
+        <header>
+            <name>Basic</name>
+            <code>
+<![CDATA[<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="keywords" content="footer, basic, centered, links"><title>Basic, Centered Footer</title><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"><link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css"><link rel="stylesheet" href="css/styles.css"><link rel="stylesheet" href="css/header-basic.css"></head><body><header class="header-basic"><div class="header-limiter"><h1><a href="#">Company<span>logo</span></a></h1><nav><a href="#">Home</a> <a href="#" class="selected">Blog</a> <a href="#">Pricing</a> <a href="#">About</a> <a href="#">Faq</a> <a href="#">Contact</a></nav></div></header>]]>
+            </code>
+        </header>
+        <header>
+            <name>Basic Light</name>
+            <code>
+<![CDATA[<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="keywords" content="footer, basic, centered, links"><title>Basic, Light, Centered Footer</title><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"><link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css"><link rel="stylesheet" href="css/styles.css"><link rel="stylesheet" href="css/header-basic-light.css"></head><body><header class="header-basic-light"><div class="header-limiter"><h1><a href="#">Company<span>logo</span></a></h1><nav><a href="#">Home</a> <a href="#" class="selected">Blog</a> <a href="#">Pricing</a> <a href="#">About</a> <a href="#">Faq</a> <a href="#">Contact</a></nav></div></header>]]>
+            </code>
+        </header>
+        <header>
+            <name>Basic Fixed</name>
+            <code>
+<![CDATA[<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="keywords" content="footer, basic, centered, links"><title>Basic, Fixed, Light, Centered Footer</title><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"><link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css"><link rel="stylesheet" href="css/styles.css"><link rel="stylesheet" href="css/header-fixed.css"></head><body><header class="header-fixed"><div class="header-limiter"><h1><a href="#">Company<span>logo</span></a></h1><nav><a href="#">Home</a> <a href="#" class="selected">Blog</a> <a href="#">Pricing</a> <a href="#">About</a> <a href="#">Faq</a> <a href="#">Contact</a></nav></div></header>]]>
+            </code>
+        </header>
+        <header>
+            <name>Login/Sign up</name>
+            <code>
+<![CDATA[<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="keywords" content="footer, basic, centered, links"><title>Login/Sign up, Light, Centered Footer</title><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"><link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css"><link rel="stylesheet" href="css/styles.css"><link rel="stylesheet" href="css/header-login-signup.css"></head><body><header class="header-login-signup"><div class="header-limiter"><h1><a href="#">Company<span>logo</span></a></h1><nav><a href="#">Home</a> <a href="#" class="selected">Blog</a> <a href="#">Pricing</a></nav><ul><li><a href="#">Login</a></li><li><a href="#">Sign up</a></li></ul></div></header>]]>
+            </code>
+        </header>
+        <header>
+            <name>Search</name>
+            <code>
+<![CDATA[<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="keywords" content="footer, basic, centered, links"><title>Search, Light, Centered Footer</title><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"><link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css"><link rel="stylesheet" href="css/styles.css"><link rel="stylesheet" href="css/header-search.css"></head><body><header class="header-search"><div class="header-limiter"><h1><a href="#">Company<span>logo</span></a></h1><nav><a href="#">Home</a> <a href="#" class="selected">Blog</a> <a href="#">Pricing</a> <a href="#">Contact</a></nav><form action="#"><input type="search" placeholder="Search!" name="search"></form></div></header>]]>
+            </code>
+        </header>
+        <header>
+            <name>Second Bar</name>
+            <code>
+<![CDATA[<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="keywords" content="footer, basic, centered, links"><title>Second Bar, Light, Centered Footer</title><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"><link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css"><link rel="stylesheet" href="css/styles.css"><link rel="stylesheet" href="css/header-second-bar.css"></head><body><header class="header-two-bars"><div class="header-first-bar"><div class="header-limiter"><h1><a href="#">Company<span>logo</span></a></h1><nav><a href="#">Overview</a> <a href="#" class="selected">Surveys</a> <a href="#">Reports</a> <a href="#">Roles</a></nav><a href="#" class="logout-button">Logout</a></div></div><div class="header-second-bar"><div class="header-limiter"><h2><a href="#">Survey name</a></h2><nav><a href="#"><i class="fa fa-comments-o"></i> Questions</a> <a href="#"><i class="fa fa-file-text"></i> Results</a> <a href="#"><i class="fa fa-group"></i> Participants</a> <a href="#"><i class="fa fa-cogs"></i> Settings</a></nav></div></div></header>]]>
+            </code>
+        </header>
+        <header>
+            <name>User Dropdown</name>
+            <code>
+<![CDATA[<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="keywords" content="footer, basic, centered, links"><title>User Dropdown, Light, Centered Footer</title><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"><link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css"><link rel="stylesheet" href="css/styles.css"><link rel="stylesheet" href="css/header-user-dropdown.css"></head><body><header class="header-user-dropdown"><div class="header-limiter"><h1><a href="#">Company<span>logo</span></a></h1><nav><a href="#">Overview</a> <a href="#">Surveys</a> <a href="#">Reports</a> <a href="#">Roles <span class="header-new-feature">new</span></a></nav><div class="header-user-menu"><img src="img/1.jpg" alt="User Image"><ul><li><a href="#">Settings</a></li><li><a href="#">Payments</a></li><li><a href="#" class="highlight">Logout</a></li></ul></div></div>]]>
+            </code>
+        </header>
     </page>
-    <page url="site">
-        <name>Site</name>
-        <code>
-<![CDATA[
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Second Bar Header</title><link rel="stylesheet" href="assets/demo.css"><link rel="stylesheet" href="assets/header-second-bar.css"><link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"></head><body><header class="header-two-bars"><div class="header-first-bar"><div class="header-limiter"><h1><a href="#">Company<span>logo</span></a></h1><nav><a href="#">Overview</a> <a href="#" class="selected">Surveys</a> <a href="#">Reports</a> <a href="#">Roles</a></nav><a href="#" class="logout-button">Logout</a></div></div><div class="header-second-bar"><div class="header-limiter"><h2><a href="#">Survey name</a></h2><nav><a href="#"><i class="fa fa-comments-o"></i> Questions</a> <a href="#"><i class="fa fa-file-text"></i> Results</a> <a href="#"><i class="fa fa-group"></i> Participants</a> <a href="#"><i class="fa fa-cogs"></i> Settings</a></nav></div></div></header><div class="menu"><img src="assets/demo-arrow.png" alt="arrow" height="120"><h1>Freebie: 7 Responsive Header Templates</h1><h2><a href="http://tutorialzine.com/2015/02/freebie-7-responsive-header-templates/">Download</a></h2><ul><li><a href="index.html">Basic</a></li><li><a href="header-basic-light.html">Basic Light</a></li><li><a href="header-fixed.html">Fixed</a></li><li><a href="header-login-signup.html">Login/Sign up</a></li><li><a href="header-search.html">Search</a></li><li><a href="header-second-bar.html" class="active">Second Bar</a></li><li><a href="header-user-dropdown.html">User Dropdown</a></li></ul></div><script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script src="http://cdn.tutorialzine.com/misc/enhance/v3.js" async></script></body></html>
-]]>            
-        </code>
+    <page section="body">
+        <body>
+            <name>Grid Pricing Table</name>
+            <code>
+<![CDATA[<link rel="stylesheet" href="css/pricing-table-grid.css"><table class="pricing-table-grid"><thead><tr class="plan"><th></th><th class="plan-info"><strong>Basic Plan</strong> <span>Perfect for individuals and freelancers</span></th><th class="plan-info featured"><strong>Pro Plan</strong> <span>Perfect for pro developers and small teams</span><div class="popular-badge">Popular</div></th><th class="plan-info"><strong>Enterprise Plan</strong> <span>For large teams and enterprises</span></th></tr></thead><tbody><tr class="highlight"><td class="plan-spec">Price</td><td>$9 / month</td><td>$15 / month</td><td>$50 / month</td></tr><tr><td class="plan-spec">Space</td><td>10 GB</td><td>20 GB</td><td>100 GB</td></tr><tr><td class="plan-spec">Traffic</td><td>1 TB</td><td>2 TB</td><td>10 TB</td></tr><tr><td class="plan-spec">Users</td><td>1</td><td>10</td><td>Unlimited</td></tr><tr><td class="plan-spec">Websites</td><td>10</td><td>50</td><td>Unlimited</td></tr><tr class="order-buttons"><td class="plan-spec"></td><td class="plan-order"><a href="#" class="order-a-plan">Order Now</a></td><td class="plan-order"><a href="#" class="order-a-plan">Order Now</a></td><td class="plan-order"><a href="#" class="order-a-plan">Contact Us</a></td></tr></tbody></table><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />]]>
+            </code>
+        </body>
+        <body>
+            <name>Horizontal Pricing Table</name>
+            <code>
+<![CDATA[<link rel="stylesheet" href="css/pricing-table-horizontal.css"><div class="pricing-table-horizontal"><div class="plan"><div class="plan-left-information"><h2>Basic Plan</h2><p>Perfect for individuals and freelancers. You get plenty of space to host all your websites and enough traffic to power your business.</p><p class="plan-price">$9 / month</p></div><div class="plan-right-information"><p><span>Space</span> <strong>10 GB</strong></p><p><span>Traffic</span> <strong>1 TB</strong></p><p><span>Users</span> <strong>1</strong></p><div class="plan-order"><a href="#" class="order-a-plan">Order Now</a></div></div></div><div class="plan featured"><span class="popular-badge">Popular</span><div class="plan-left-information"><h2>Pro Plan</h2><p>Perfect for small teams and companies. Your agency can host a large number of client websites, and you can create individual user accounts.</p><p class="plan-price">$15 / month</p></div><div class="plan-right-information"><p><span>Space</span> <strong>20 GB</strong></p><p><span>Traffic</span> <strong>2 TB</strong></p><p><span>Users</span> <strong>10</strong></p><div class="plan-order"><a href="#" class="order-a-plan">Order Now</a></div></div></div><div class="plan"><div class="plan-left-information"><h2>Enterprise Plan</h2><p>Perfect for large companies and enterprises. You can meet the growing needs of your business and create accounts for all your employees.</p><p class="plan-price">$50 / month</p></div><div class="plan-right-information"><p><span>Space</span> <strong>100 GB</strong></p><p><span>Traffic</span> <strong>10 TB</strong></p><p><span>Users</span> <strong style="font-size:26px;top:4px">∞</strong></p><div class="plan-order"><a href="#" class="order-a-plan">Contact us</a></div></div></div></div><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />]]>
+            </code>
+        </body>
     </page>
-    <page url="about">
-        <name>About</name>
-        <code>
-<![CDATA[
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>User Dropdown Header</title><link rel="stylesheet" href="assets/demo.css"><link rel="stylesheet" href="assets/header-user-dropdown.css"><link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css"></head><body><header class="header-user-dropdown"><div class="header-limiter"><h1><a href="#">Company<span>logo</span></a></h1><nav><a href="#">Overview</a> <a href="#">Surveys</a> <a href="#">Reports</a> <a href="#">Roles <span class="header-new-feature">new</span></a></nav><div class="header-user-menu"><img src="assets/2.jpg" alt="User Image"><ul><li><a href="#">Settings</a></li><li><a href="#">Payments</a></li><li><a href="#" class="highlight">Logout</a></li></ul></div></div></header><div class="menu"><img src="assets/demo-arrow.png" alt="arrow" height="120"><h1>Freebie: 7 Responsive Header Templates</h1><h2><a href="http://tutorialzine.com/2015/02/freebie-7-responsive-header-templates/">Download</a></h2><ul><li><a href="index.html">Basic</a></li><li><a href="header-basic-light.html">Basic Light</a></li><li><a href="header-fixed.html">Fixed</a></li><li><a href="header-login-signup.html">Login/Sign up</a></li><li><a href="header-search.html">Search</a></li><li><a href="header-second-bar.html">Second Bar</a></li><li><a href="header-user-dropdown.html" class="active">User Dropdown</a></li></ul></div><script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script>$(document).ready(function(){var e=$(".header-user-dropdown .header-user-menu");e.on("touchend",function(o){e.addClass("show"),o.preventDefault(),o.stopPropagation()}),$(document).on("touchend",function(o){e.removeClass("show")})});</script><script src="http://cdn.tutorialzine.com/misc/enhance/v3.js" async></script></body></html>
-]]>
-        </code>
+    <page section="footer">
+        <footer>
+            <name>Basic Centered</name>
+            <code>
+<![CDATA[<link rel="stylesheet" href="css/footer-basic-centered.css"><footer class="footer-basic-centered"><p class="footer-company-motto">The company motto.</p><p class="footer-links"><a href="#">Home</a> · <a href="#">Blog</a> · <a href="#">Pricing</a> · <a href="#">About</a> · <a href="#">Faq</a> · <a href="#">Contact</a></p><p class="footer-company-name">Company Name &copy; 2017</p></footer></body></html>]]>
+            </code>
+        </footer>
+        <footer>
+            <name>Distributed</name>
+            <code>
+<![CDATA[<link rel="stylesheet" href="css/footer-distributed.css"><footer class="footer-distributed"><div class="footer-right"><a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-linkedin"></i></a> <a href="#"><i class="fa fa-github"></i></a></div><div class="footer-left"><p class="footer-links"><a href="#">Home</a> · <a href="#">Blog</a> · <a href="#">Pricing</a> · <a href="#">About</a> · <a href="#">Faq</a> · <a href="#">Contact</a></p><p>Company Name &copy; 2017</p></div></footer></body></html>]]>
+            </code>
+        </footer>
+        <footer>
+            <name>Distributed With Address And Phones</name>
+            <code>
+<![CDATA[<link rel="stylesheet" href="css/footer-distributed-with-address-and-phones.css"><footer class="footer-distributed"><div class="footer-left"><h3>Company<span>logo</span></h3><p class="footer-links"><a href="#">Home</a> · <a href="#">Blog</a> · <a href="#">Pricing</a> · <a href="#">About</a> · <a href="#">Faq</a> · <a href="#">Contact</a></p><p class="footer-company-name">Company Name &copy; 2017</p></div><div class="footer-center"><div><i class="fa fa-map-marker"></i><p><span>21 Revolution Street</span> Paris, France</p></div><div><i class="fa fa-phone"></i><p>+1 555 123456</p></div><div><i class="fa fa-envelope"></i><p><a href="mailto:support@company.com">support@company.com</a></p></div></div><div class="footer-right"><p class="footer-company-about"><span>About the company</span> Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.</p><div class="footer-icons"><a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-linkedin"></i></a> <a href="#"><i class="fa fa-github"></i></a></div></div></footer></body></html>]]>
+            </code>
+        </footer>
+        <footer>
+            <name>Distributed With Contact Form</name>
+            <code>
+<![CDATA[<link rel="stylesheet" href="css/footer-distributed-with-contact-form.css"><footer class="footer-distributed"><div class="footer-left"><h3>Company<span>logo</span></h3><p class="footer-links"><a href="#">Home</a> · <a href="#">Blog</a> · <a href="#">Pricing</a> · <a href="#">About</a> · <a href="#">Faq</a> · <a href="#">Contact</a></p><p class="footer-company-name">Company Name &copy; 2017</p><div class="footer-icons"><a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-linkedin"></i></a> <a href="#"><i class="fa fa-github"></i></a></div></div><div class="footer-right"><p>Contact Us</p><form action="#" method="post"><input name="email" placeholder="Email"><textarea name="message" placeholder="Message"></textarea><button>Send</button></form></div></footer></body></html>]]>
+            </code>
+        </footer>
+        <footer>
+            <name>Distributed With Search</name>
+            <code>
+<![CDATA[<link rel="stylesheet" href="css/footer-distributed-with-search.css"><footer class="footer-distributed"><div class="footer-left"><p class="footer-links"><a href="#">Home</a> · <a href="#">Blog</a> · <a href="#">Pricing</a> · <a href="#">About</a> · <a href="#">Faq</a> · <a href="#">Contact</a></p><p class="footer-company-name">Company Name &copy; 2015</p></div><div class="footer-right"><form action="#"><input placeholder="Search our website" name="search"> <i class="fa fa-search"></i></form></div></footer></body></html>]]>
+            </code>
+        </footer>
     </page>
 </html>

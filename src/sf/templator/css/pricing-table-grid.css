@@ -1,0 +1,105 @@
+.pricing-table-grid {
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0 auto;
+	border-spacing: 0;
+	border-collapse: collapse;
+	width:800px;
+    margin-bottom: 75px;
+}
+
+/* Plan names */
+
+.pricing-table-grid th.featured {
+	position: relative;
+	width: 230px;
+	overflow: hidden;
+}
+
+.pricing-table-grid th.featured .popular-badge {
+	position: absolute;
+	right: -27px;
+	top: 13px;
+	background-color: #6cc76a;
+	box-shadow: -1px 1px 1px 0 rgba(0, 0, 0, 0.09);
+	width: 105px;
+	height: 28px;
+	text-align: center;
+	line-height: 2.5;
+	color: #ffffff;
+	font-size: 11px;
+	font-weight: bold;
+
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.pricing-table-grid th.plan-info {
+	background-color: #f7f9fc ;
+	border: 1px solid #dce1e8;
+	border-bottom: none;
+	padding: 20px 0;
+	box-sizing: border-box;
+}
+
+.pricing-table-grid th.plan-info strong {
+	display: block;
+	color:  #4a5668;
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+
+.pricing-table-grid th.plan-info span {
+	display: block;
+	padding: 0 30px;
+	color: #717d8f;
+	font-size: 13px;
+	font-weight: normal;
+	line-height: 1.4;
+	text-align: center;
+}
+
+/* Plan metrics */
+
+.pricing-table-grid tbody tr td:not(.plan-spec) {
+	font-size: 18px;
+	color: #608ba1;
+	font-weight: bold;
+	width: 200px;
+	text-align: center;
+	background-color: #ffffff;
+	border: 1px solid #dce1e8;
+	padding: 17px 0;
+	box-sizing: border-box;
+}
+
+.pricing-table-grid tbody tr td.plan-spec {
+	color: #6C6B6B;
+	font-size: 13px;
+	font-weight: bold;
+	text-align: right;
+	padding-right: 45px;
+	width:100px;
+}
+
+.pricing-table-grid tbody tr.highlight td:not(.plan-spec) {
+	color: #dfa423;
+}
+
+.pricing-table-grid tbody tr.order-buttons td:not(.plan-spec) {
+	text-align: center;
+	padding: 30px 0;
+	box-sizing: border-box;
+}
+
+.pricing-table-grid tbody tr.order-buttons td:not(.plan-spec) a {
+	border-radius: 2px;
+	color: #ffffff;
+	background-color:  #efa154;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 13px 30px;
+	box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.1);
+	text-decoration: none;
+	white-space: nowrap;
+	box-sizing: border-box;
+}

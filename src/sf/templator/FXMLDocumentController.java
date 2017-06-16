@@ -8,6 +8,9 @@ import java.io.PrintWriter;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -30,6 +33,12 @@ import org.w3c.dom.NodeList;
 public class FXMLDocumentController implements Initializable {
 
     private String filename = "file_name";
+    Random randomNo = new Random();
+    int headerMax = 0, bodyMax = 0, footerMax = 0;
+    List<String> headerList = new ArrayList<String>();
+    List<String> bodyList = new ArrayList<String>();
+    List<String> footerList = new ArrayList<String>();
+    String assembledCode;
 
     @FXML
     private Label label;
@@ -68,20 +77,24 @@ public class FXMLDocumentController implements Initializable {
 //            int index = item.getParent().getChildren().indexOf(item);
 //            System.out.println("NEW !! " + index);
 
-            htmlEditor.setHtmlText("" + item.getValue());
-            textArea.setText(htmlEditor.getHtmlText());
-            webView.getEngine().loadContent(htmlEditor.getHtmlText());
+            assembledCode = headerList.get(randomNo.nextInt(headerMax))
+                    + bodyList.get(randomNo.nextInt(bodyMax))
+                    + footerList.get(randomNo.nextInt(footerMax));
+
+//            htmlEditor.setHtmlText("" + item.getValue());
+            htmlEditor.setHtmlText(assembledCode);
+            textArea.setText(assembledCode);
+            webView.getEngine().loadContent(assembledCode);
 
         }
     }
 
     @FXML
     private void handleSaveButton(ActionEvent event) throws IOException {
-        System.out.println("___SAVE___");
         BufferedWriter writer = null;
         try {
             writer = new BufferedWriter(new FileWriter(filename + ".html"));
-            writer.write(htmlEditor.getHtmlText());
+            writer.write(assembledCode);
 
         } catch (IOException e) {
         } finally {
@@ -114,7 +127,6 @@ public class FXMLDocumentController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-//        System.out.println("TESTING");
         try {
 //            String workingDir = System.getProperty("user.dir");
 //            System.out.println("Current working directory : " + workingDir);
@@ -125,10 +137,8 @@ public class FXMLDocumentController implements Initializable {
             doc.getDocumentElement().normalize();
 
             Element root = doc.getDocumentElement();
-            System.out.println("Root element :" + root.getNodeName());
+//            System.out.println("Root element :" + root.getNodeName());
             NodeList nList = doc.getElementsByTagName("page");
-            System.out.println("----------------------------");
-
             TreeItem<String> rootXML = new TreeItem<String>(root.getNodeName());
             rootXML.setExpanded(true);
 //        TreeItem<String> nodeItemA = new TreeItem<>("Item A");
@@ -140,25 +150,31 @@ public class FXMLDocumentController implements Initializable {
 //        TreeItem<String> nodeItemA3 = new TreeItem<>("Item A3");
 //        nodeItemA.getChildren().addAll(nodeItemA1, nodeItemA2, nodeItemA3);
 
+            TreeItem<String> nodeItemChild;
+
+            NodeList nListTemp;
             for (int temp = 0; temp < nList.getLength(); temp++) {
                 Node nNode = nList.item(temp);
-//                System.out.println("Current Element :" + nNode.getNodeName());
-                if (nNode.getNodeName() == "page") {
-                    System.out.println("PAGE");
-                }
                 if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                     Element eElement = (Element) nNode;
-                    System.out.println("URL name : " + eElement.getAttribute("url"));
-                    System.out.println("Page name : " + eElement.getElementsByTagName("name").item(0).getTextContent());
-                    System.out.println("Code : " + eElement.getElementsByTagName("code").item(0).getTextContent());
-
-                    TreeItem<String> nodeItem = new TreeItem<>(nNode.getNodeName());
-                    TreeItem<String> nodeItemChild = new TreeItem<>(eElement.getElementsByTagName("name").item(0).getTextContent());
-
-                    TreeItem<String> found = new TreeItem<>(eElement.getElementsByTagName("code").item(0).getTextContent());
-                    nodeItemChild.getChildren().add(found);
-
-                    nodeItem.getChildren().add(nodeItemChild);
+                    TreeItem<String> nodeItem = new TreeItem<>(eElement.getAttribute("section"));
+                    nListTemp = doc.getElementsByTagName(eElement.getAttribute("section"));
+                    for (int i = 0; i < nListTemp.getLength(); i++) {
+                        nodeItemChild = new TreeItem<>(eElement.getElementsByTagName("name").item(i).getTextContent());
+                        nodeItem.getChildren().add(nodeItemChild);
+                        if (eElement.getAttribute("section").equals("header")) {
+                            headerList.add(eElement.getElementsByTagName("code").item(i).getTextContent());
+                        }
+                        if (eElement.getAttribute("section").equals("body")) {
+                            bodyList.add(eElement.getElementsByTagName("code").item(i).getTextContent());
+                        }
+                        if (eElement.getAttribute("section").equals("footer")) {
+                            footerList.add(eElement.getElementsByTagName("code").item(i).getTextContent());
+                        }
+                        headerMax = headerList.size();
+                        bodyMax = bodyList.size();
+                        footerMax = footerList.size();
+                    }
                     rootXML.getChildren().add(nodeItem);
                     nodeItem.setExpanded(true);
                 }
