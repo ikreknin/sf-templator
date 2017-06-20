@@ -39,7 +39,7 @@ public class Controller implements Initializable {
     List<String> bodyList = new ArrayList<String>();
     List<String> footerList = new ArrayList<String>();
     String assembledCode;
-    
+
     private Model model = new Model();
 
     @FXML
@@ -71,22 +71,18 @@ public class Controller implements Initializable {
         TreeItem item = (TreeItem) treeView.getSelectionModel().getSelectedItem();
         System.out.println("Tree Clicked!");
         if (mouseEvent.getClickCount() == 2) {
-            System.out.println("Twice !! " + item.getValue());
-            System.out.println("Code: " + item.getValue());
+            System.out.println("Clicked twice. Code: " + item.getValue());
 //            int row = treeView.getRow(item);
-//            System.out.println("NEW !! " + row);
+//            System.out.println(row);
 //            int index = item.getParent().getChildren().indexOf(item);
-//            System.out.println("NEW !! " + index);
+//            System.out.println(index);
 
-            assembledCode = headerList.get(randomNo.nextInt(headerMax))
-                    + bodyList.get(randomNo.nextInt(bodyMax))
-                    + footerList.get(randomNo.nextInt(footerMax));
+            assembledCode = assembleCode();
 
 //            htmlEditor.setHtmlText("" + item.getValue());
             htmlEditor.setHtmlText(assembledCode);
             textArea.setText(assembledCode);
             webView.getEngine().loadContent(assembledCode);
-
         }
     }
 
@@ -110,7 +106,6 @@ public class Controller implements Initializable {
 
     @FXML
     private void handleViewButton(ActionEvent event) throws URISyntaxException, IOException {
-        System.out.println("___VIEW___");
         String url = filename + ".html";
         URI u = new URI(url);
         java.awt.Desktop.getDesktop().browse(u);
@@ -118,12 +113,18 @@ public class Controller implements Initializable {
 
     @FXML
     private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        button.setText("Clicked");
+        assembledCode = assembleCode();
         htmlEditor.setHtmlText(INITIAL_TEXT);
         textArea.setWrapText(true);
         textArea.setText(htmlEditor.getHtmlText());
         webView.getEngine().loadContent(htmlEditor.getHtmlText());
+    }
+
+    private String assembleCode() {
+        assembledCode = headerList.get(randomNo.nextInt(headerMax))
+                + bodyList.get(randomNo.nextInt(bodyMax))
+                + footerList.get(randomNo.nextInt(footerMax));
+        return assembledCode;
     }
 
     @Override
@@ -142,14 +143,6 @@ public class Controller implements Initializable {
             NodeList nList = doc.getElementsByTagName("page");
             TreeItem<String> rootXML = new TreeItem<String>(root.getNodeName());
             rootXML.setExpanded(true);
-//        TreeItem<String> nodeItemA = new TreeItem<>("Item A");
-//        TreeItem<String> nodeItemB = new TreeItem<>("Item B");
-//        TreeItem<String> nodeItemC = new TreeItem<>("Item C");
-//        rootXML.getChildren().addAll(nodeItemA, nodeItemB, nodeItemC);
-//        TreeItem<String> nodeItemA1 = new TreeItem<>("Item A1");
-//        TreeItem<String> nodeItemA2 = new TreeItem<>("Item A2");
-//        TreeItem<String> nodeItemA3 = new TreeItem<>("Item A3");
-//        nodeItemA.getChildren().addAll(nodeItemA1, nodeItemA2, nodeItemA3);
 
             TreeItem<String> nodeItemChild;
 

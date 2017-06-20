@@ -13,57 +13,57 @@
 
 <AnchorPane id="BorderPane" prefHeight="1000.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sf.templator.Controller">
     <children>
-      <TabPane layoutY="21.0" prefHeight="980.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE">
-        <tabs>
-          <Tab text="Home">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                              <Button fx:id="button" alignment="CENTER" layoutX="7.0" layoutY="30.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50" prefWidth="150" text="Start" textAlignment="CENTER">
-                                  <font>
-                                      <Font size="18.0" />
-                                  </font>
-                              </Button>
-                        <Button layoutX="177.0" layoutY="26.0" mnemonicParsing="false" onAction="#handleSaveButton" prefHeight="31.0" prefWidth="113.0" text="Save" />
-                        <Button layoutX="177.0" layoutY="65.0" mnemonicParsing="false" onAction="#handleViewButton" prefHeight="31.0" prefWidth="113.0" text="View" />
-                        <TreeView fx:id="treeView" layoutX="307.0" layoutY="24.0" onContextMenuRequested="#mouseClick" onMouseClicked="#mouseClick" prefHeight="905.0" prefWidth="683.0" />
-                     </children>
-                  </AnchorPane>
-            </content>
-          </Tab>
-          <Tab text="WYSIWYG Editor">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <HTMLEditor fx:id="htmlEditor" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="14.0" layoutY="-34.0" prefHeight="965.0" prefWidth="976.0" />
-                     </children>
-                  </AnchorPane>
-            </content>
-          </Tab>
-            <Tab text="Text Editor">
-              <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <TextArea fx:id="textArea" layoutX="6.0" prefHeight="932.0" prefWidth="990.0" />
-                     </children>
-                  </AnchorPane>
-              </content>
-            </Tab>
-            <Tab text="Viewer">
-              <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <WebView fx:id="webView" layoutX="14.0" layoutY="14.0" prefHeight="915.0" prefWidth="977.0" />
-                     </children>
-                  </AnchorPane>
-              </content>
-            </Tab>
-            <Tab text="Settings">
-              <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-              </content>
-            </Tab>
-        </tabs>
-      </TabPane>
+        <TabPane layoutY="21.0" prefHeight="980.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Home">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Button fx:id="button" alignment="CENTER" layoutX="7.0" layoutY="30.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50" prefWidth="150" text="Generate" textAlignment="CENTER">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Button>
+                                <Button layoutX="177.0" layoutY="26.0" mnemonicParsing="false" onAction="#handleSaveButton" prefHeight="31.0" prefWidth="113.0" text="Save" />
+                                <Button layoutX="177.0" layoutY="65.0" mnemonicParsing="false" onAction="#handleViewButton" prefHeight="31.0" prefWidth="113.0" text="View" />
+                                <TreeView fx:id="treeView" layoutX="307.0" layoutY="24.0" onContextMenuRequested="#mouseClick" onMouseClicked="#mouseClick" prefHeight="905.0" prefWidth="683.0" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="WYSIWYG Editor">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <HTMLEditor fx:id="htmlEditor" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="14.0" layoutY="-34.0" prefHeight="965.0" prefWidth="976.0" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Text Editor">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TextArea fx:id="textArea" layoutX="6.0" prefHeight="932.0" prefWidth="990.0" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Viewer">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <WebView fx:id="webView" layoutX="14.0" layoutY="14.0" prefHeight="915.0" prefWidth="977.0" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Settings">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
     </children>   
 </AnchorPane>
